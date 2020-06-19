@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>17. Middleware в redux<br>
+
+        Middleware - собрание плагинов/библиотек, которое улучшают или расширяют возможности redux, обычно используются для создания логирования, вывода сообщений об ошибках и т.д.
+        reduxLoogger - логер, который выводит в консоль браузера всю информацию о происходящих событиях. 
+        applyMiddleware - функция, которая позволяет применить сразу несколько Middleware, возвращает тип Enhancer.
+        
+        Типы 
+        Enhancer ("улучшатель" хранилища) функция, которая берет функцию StoreCreator и делает из него улучшенный StoreCreator. 
+        StoreCreator (почти тоже самое, что и createStore) берет Reducer, начальное состояние и возвращает хранилище.
+        Middleware - функция, которая берет хранилище с урезанными функциями (MiddlewareApi, только функции gerState и dispatch), далее создает новый dispatch`ер, и далее вызывает Action (по факту в хранилище изменяет функцию dispatch на улучшенную).
+        rEnhancer - работает как Middleware, но к тому же изменяет Reducer на новый.
+        rEnhancer - позволяет нам использовать типы Kotlin.</p>
+</body>
+</html>
